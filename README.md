@@ -1,7 +1,5 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
-Adserver est constitué de 2 serveurs web permettant de gérer:
+# Adservers
+Adservers est constitué de 2 serveurs web permettant de gérer:
 * - les demandes de publicités de la part d'un éditeur pour un emplacement publicité donné
 * - l'affichage des publicités réussis avec possibilité de recevoir la somme des prix des pubs affichées 
 
@@ -25,6 +23,3 @@ GET requête permettant de récupérer la somme totale par campagnes des pubs af
 ```
 http://localhost:3030/sum_placement?placement=f64551fcd6f07823cb87971cfb914464
 ```
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
