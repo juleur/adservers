@@ -34,21 +34,24 @@ func isPlacementOk(bodyPlacementID string, campaignPlacements []string) bool {
 }
 
 // GetCampaign s
-func GetCampaign(bodyReq models.BodyRequest, jsonData []models.Campaign) models.Campaign {
+func GetCampaign(bodyReq models.BodyRequest, jsonData []models.Campaign) (models.Campaign, bool) {
 	cs := []models.Campaign{}
 	bestCampaign := models.Campaign{}
 	for _, campaignData := range jsonData {
-		keep := isPlacementOk(bodyReq.PlacementID, campaignData.Placements)
-		keep = isCountryOk(bodyReq.Country, campaignData.Countries)
-		keep = isDeviceOk(bodyReq.Device, campaignData.Devices)
-		if keep {
+		pOK := isPlacementOk(bodyReq.PlacementID, campaignData.Placements)
+		cOK := isCountryOk(bodyReq.Country, campaignData.Countries)
+		dOK := isDeviceOk(bodyReq.Device, campaignData.Devices)
+		if pOK && cOK && dOK {
 			campaignData.Placements[0] = bodyReq.PlacementID
 			cs = append(cs, campaignData)
 		}
+	}
+	if len(cs) == 0 {
+		return bestCampaign, true
 	}
 	sort.Sort(models.ByPrice(cs))
 	if len(cs) > 0 {
 		bestCampaign = cs[0]
 	}
-	return bestCampaign
+	return bestCampaign, false
 }

@@ -8,3 +8,4 @@
 {"timestamp":"26-11-2018 18:50:57","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":13.4}
 {"timestamp":"26-11-2018 18:51:08","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":13.4}
 {"timestamp":"26-11-2018 18:52:31","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"9c0abe51c6e6655d81de2d044d4fb194","price":8.3}
+{"timestamp":"18-03-2019 10:40:13","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"9c0abe51c6e6655d81de2d044d4fb194","price":8.3}

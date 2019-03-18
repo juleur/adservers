@@ -51,7 +51,11 @@ func AdserverHandler(jsonData []models.Campaign) http.Handler {
 		case "POST":
 			reqParsed, err := parsePostRequest(r)
 			utils.HTTPError(w, err)
-			campaign := utils.GetCampaign(reqParsed, jsonData)
+			campaign, notFound := utils.GetCampaign(reqParsed, jsonData)
+			if notFound {
+				w.WriteHeader(http.StatusNotFound)
+				return
+			}
 			serResponse := &models.Campaign{
 				ID:      campaign.ID,
 				Content: campaign.Content,

@@ -20,7 +20,7 @@ func campaignArray(campaigns models.Campaigns) []models.Campaign {
 // JSONFileOpener func
 func JSONFileOpener(filename string) []models.Campaign {
 	campaigns := models.Campaigns{}
-	content, err := ioutil.ReadFile("data/" + filename)
+	content, err := ioutil.ReadFile(filename)
 	CheckError(err)
 	err = json.Unmarshal(content, &campaigns)
 	CheckError(err)
