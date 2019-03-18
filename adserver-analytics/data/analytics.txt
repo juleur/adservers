@@ -1,0 +1,10 @@
+{"timestamp":"26-11-2018 18:21:03","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":3.65}
+{"timestamp":"26-11-2018 18:27:42","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"bcfcb9e098131cdd57ccaba8dbdd0f63","price":78.44}
+{"timestamp":"26-11-2018 18:34:20","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"131cdba8dbd57ccadd0f63bcfcb9e098","price":43.6}
+{"timestamp":"26-11-2018 18:34:20","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"f63bcfcbcad0981d09e31cdba8dbd57c","price":23.8}
+{"timestamp":"26-11-2018 18:46:29","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"d0fb9cade09863bcfc131cdba8dbd57c","price":63.4}
+{"timestamp":"26-11-2018 18:21:03","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":3.65}
+{"timestamp":"26-11-2018 18:50:15","placement":"3946ca64ff78d93ca61090a437cbb6b3","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":13.4}
+{"timestamp":"26-11-2018 18:50:57","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":13.4}
+{"timestamp":"26-11-2018 18:51:08","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"cadd0f63bcfcb9e098131cdba8dbd57c","price":13.4}
+{"timestamp":"26-11-2018 18:52:31","placement":"f64551fcd6f07823cb87971cfb914464","campaign":"9c0abe51c6e6655d81de2d044d4fb194","price":8.3}

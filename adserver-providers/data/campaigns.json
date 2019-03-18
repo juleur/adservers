@@ -1,0 +1,60 @@
+{
+  "campaigns": {
+    "d0f631ca1ddba8db3bcfcb9e057cdc98": {
+      "price": 2.5,
+      "content": {
+        "title": "Mangez 5 fruits et légumes par jour",
+        "description": "Manger, Bouger, Santé",
+        "landing": "http://www.mangerbouger.fr/"
+      },
+      "countries": [
+        "FRA"
+      ],
+      "devices": [
+        "DESKTOP",
+        "MOBILE"
+      ],
+      "placements": [
+        "f64551fcd6f07823cb87971cfb914464",
+        "3946ca64ff78d93ca61090a437cbb6b3"
+      ]
+    },
+    "cadd0f63bcfcb9e098131cdba8dbd57c": {
+      "price": 13.4,
+      "content": {
+        "title": "Buvez 1l de glyphosate par jour",
+        "description": "Pesticide le plus bio du marché",
+        "landing": "https://en.wikipedia.org/wiki/Glyphosate"
+      },
+      "countries": [
+        "BEL"
+      ],
+      "devices": [
+        "DESKTOP"
+      ],
+      "placements": [
+        "3946ca64ff78d93ca61090a437cbb6b3"
+      ]
+    },
+    "9c0abe51c6e6655d81de2d044d4fb194": {
+      "price": 8.3,
+      "content": {
+        "title": "Fumer tue",
+        "description": "Fumer c'est mal",
+        "landing": "http://www.tabac-info-service.fr/"
+      },
+      "countries": [
+        "FRA",
+        "BEL"
+      ],
+      "devices": [
+        "DESKTOP",
+        "MOBILE"
+      ],
+      "placements": [
+        "3946ca64ff78d93ca61090a437cbb6b3",
+        "f64551fcd6f07823cb87971cfb914464"
+      ]
+    }
+  }
+}
