@@ -6,17 +6,10 @@ services:
       dockerfile: ./adserver-providers/Dockerfile
     ports:
       - "2323:2323"
-    networks:
-      - mynet
-  
+
   adserver-analytics:
     build:
       context: .
       dockerfile: ./adserver-analytics/Dockerfile
     ports:
       - "3030:3030"
-    networks:
-      - mynet
-
-networks:
-  mynet:

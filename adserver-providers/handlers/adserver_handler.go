@@ -3,6 +3,7 @@ package handlers
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -11,7 +12,7 @@ import (
 	"github.com/juleur/mini-adserver/adserver-providers/utils"
 )
 
-func redirectToAnalytics(c models.Campaign) error {
+func redirectToAnalytics(c models.Campaign, analyticServIPAddr string) error {
 	campaign := models.CampaignAnalytic{
 		Timestamp:   utils.TimestampGenerator(),
 		PlacementID: c.Placements[0],
@@ -19,9 +20,12 @@ func redirectToAnalytics(c models.Campaign) error {
 		Price:       c.Price,
 	}
 	buf := new(bytes.Buffer)
-	json.NewEncoder(buf).Encode(campaign)
+	err := json.NewEncoder(buf).Encode(campaign)
 	//handles errors
-	_, err := http.Post("http://127.0.0.1:3030/campaign_provided", "application/json", buf)
+	if err != nil {
+		return err
+	}
+	_, err = http.Post(fmt.Sprintf("%s:3030/campaign_provided", analyticServIPAddr), "application/json", buf)
 	if err != nil {
 		return err
 	}
@@ -45,7 +49,7 @@ func parsePostRequest(r *http.Request) (models.BodyRequest, error) {
 }
 
 // AdserverHandler is the http POST response
-func AdserverHandler(jsonData []models.Campaign) http.Handler {
+func AdserverHandler(jsonData []models.Campaign, analyticServIPAddr string) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch r.Method {
 		case "POST":
@@ -65,7 +69,7 @@ func AdserverHandler(jsonData []models.Campaign) http.Handler {
 			w.WriteHeader(http.StatusOK)
 			w.Header().Set("Content-Type", "application/json")
 			w.Write(cpgn)
-			err = redirectToAnalytics(campaign)
+			err = redirectToAnalytics(campaign, analyticServIPAddr)
 			if err != nil {
 				log.Println(err)
 			}

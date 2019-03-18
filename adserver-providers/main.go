@@ -10,12 +10,14 @@ import (
 )
 
 func main() {
-	log.Println("Adserver Providers")
+	log.Println("Adserver Providers Started")
 	jsonFilename := flag.String("f", "campaigns.json", "")
 	flag.Parse()
 
 	jsonData := utils.JSONFileOpener(*jsonFilename)
+	analyticServIPAddr := "http://192.168.0.122"
 
-	http.Handle("/ad", handlers.AdserverHandler(jsonData))
+	http.Handle("/ad", handlers.AdserverHandler(jsonData, analyticServIPAddr))
 	http.ListenAndServe(":2323", nil)
+	log.Println("Adserver Providers Stopped")
 }
